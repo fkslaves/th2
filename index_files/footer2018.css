@@ -1,0 +1,43 @@
+  
+
+h2 { -webkit-margin-before: 0em; -webkit-margin-after: 0em; -webkit-margin-start: 0px; -webkit-margin-end: 0px; }   
+.footer-zone-services { background: #26be7a; box-shadow: 0 -2px 4px rgba(0,0,0,0.2); box-sizing: border-box; font-family: CS ChatThaiUI; position: relative; border-top:6px solid #bde6d4; }
+.footer-zone-services a { text-decoration: none !important }
+.wrapper-sv { width: 1200px; margin: 0 auto; position: relative; overflow: hidden; padding: 20px 0}
+.footer-zone-services .services { display: inline; float: left; width: 65% !important; height: 325px;  padding: 20px 15px 0 15px !important; border-right: 1px solid #4cd597 }
+.footer-zone-services .services h2 , .footer-zone-services .foot-details h2{ display: block; text-align: left; color: #044523; font-size: 26px !important; font-weight: 600; margin-bottom: 0px; line-height: 33px; border-bottom: 1px solid #4cd597; padding: 0px 20px 10px 20px; font-family: CS ChatThaiUI !important; }
+.footer-zone-services .services em { display: block; text-align: right;  margin-bottom: 0px; line-height: 33px; padding: 10px 20px 10px 20px; }
+.footer-zone-services .services em a { color: #044523 ; font-size: 17px !important; text-decoration: none !important; font-style: normal !important; padding: 5px 20px 5px 10px; border-radius: 5px;}
+.footer-zone-services .services em a:hover { background:#18e98b; padding: 5px 20px 5px 10px; border-radius: 5px;}
+.footer-zone-services .foot-details { float: left; display: inline-block; width: 29% !important; height: 325px; padding: 20px 15px 0 15px !important;}
+.foot-details .about { display: inline; float: left; width: 100% ; padding: 0 20px; box-sizing: border-box; margin-top: 20px;}
+.foot-details .about .app-kapook { position: absolute; bottom: 0; left: 0; width: 65px !important;}
+.foot-details .about .app-store , .foot-details .about .google-play { display: inline-block; width: 90px !important; margin-right: 8px;}  
+.foot-details .about p { font-weight: normal; font-size: 18px !important; line-height: 32px; padding: 0px 0 0; font-family: CS ChatThaiUI;     -webkit-margin-before: 0em !important; -webkit-margin-after: 0em !important; -webkit-margin-start: 0px; -webkit-margin-end: 0px;}
+ul.services-list { z-index: 99999; width: 100%; overflow: hidden; margin: 0 auto; padding: 30px 0 0 0 !important;}
+ul.services-list li { width: 48%; box-sizing: border-box; float: left; display: inline-block; margin: 0 0px 5px 15px; height: 97px;
+     padding: 10px 10px 10px 10px; border-radius: 8px; transition: all 0.3s ease-in-out;}
+ul.services-list li:hover { background:#18ab69 ;   transition: all 0.3s ease-in-out; }
+ul.services-list li a h3 {  font-family: CS ChatThaiUI !important; font-size: 20px !important; display: inline-block !important; text-align: left; margin-bottom: 3px; color: #044523; font-weight: 600;
+    margin-top: 2px !important;     line-height: 26px !important; }
+ul.services-list li:hover a h3 { color:#000; }
+ul.services-list li:hover a { color: #88ffc3 }
+ul.services-list li a span { font-size: 13px !important; line-height: 20px !important; display: block; text-align: left; margin-bottom: 5px !important; color: #fff !important }
+ul.services-list li:hover a span { color:#5fffb7 !important }
+ul.services-list li a em { font-size: 19px; display: block; text-align: center; text-decoration: none !important; font-style: normal; color: #000 }
+ul.services-list li img { float: left;  margin-right: 10px; margin-bottom: 30px;}
+
+.foot-details .foot-action ul { list-style-type: none; -webkit-margin-before:0em; -webkit-margin-after: 0em; -webkit-margin-start: 0px; -webkit-margin-end: 0px; -webkit-padding-start: 0px; margin-top: 10px; }
+.foot-details .foot-action ul li { float: left; display: inline-block; width: 38%; padding: 3px 10px; margin: 0px 10px 0px 10px; background: url(https://my.kapook.com/img-services/circle-list.png) top 15px left 8px no-repeat ; text-indent: 15px; margin-bottom: 5px; border-radius: 5px;}
+.foot-details .foot-action ul li:hover { float: left; display: inline-block; width: 38%; padding: 3px 10px; margin: 0px 10px 0px 10px; background: url(https://my.kapook.com/img-services/circle-list.png) top 15px left 8px no-repeat #27a76e; text-indent: 15px; margin-bottom: 5px;  border-radius: 5px;}
+.foot-details .foot-action ul li a { font-size: 20px; color: #fff}
+.foot-details .foot-action p a { border: 0; display: inline;  float: right !important;  color: #000;  margin: 37px 5px 0;  cursor: pointer;  font-weight: normal !important;  font-size: 13px;  padding: 5px 18px 3px 18px;  border-radius: 6px;  font-family: CS ChatThaiUIUI; background: #25e48e !important;}
+.foot-details .foot-action { overflow: hidden; width: 100%; margin-top: 20px; height: 100px; display: block;}
+.foot-details .foot-action p { display: inline; }
+.foot-details .official-social2 { display: block; width: 100%; overflow: hidden; text-align: left; padding: 0 20px; margin-top: 20px;}
+.foot-details .official-social2 a img { width: 40px;  margin: 0 10px 0 0px;}
+.arrow { display: inline-block; border-radius: 50%; vertical-align: middle; text-align: center;  width: 30px; height: 30px; }
+.arrow span.ar { display: inline-block !important; width: 30px !important; height: 30px !important; background: #18e98b; border-radius: 50% !important; margin-left: 0.75em !important;}
+.arrow span.ar:after { content: ''; display: inline-block; margin-top: 9px; margin-left: -2px; width:9px; height:9px; border-top: 3px solid #fff;
+  border-right: 3px solid #fff; -moz-transform: rotate(45deg); -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+  

@@ -1,0 +1,191 @@
+
+<!-- saved from url=(0084)https://cacheportal.kapook.com/iframe_widget.php?portal=health&portal_id=4&page=diet -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" media="all" href="./fontface(1).css">
+<style>
+    body, p, ul, li, h1, h2, h3 { padding: 0; margin: 0; font-family:'CS ChatThaiUI'; font-size: 16px;} 
+    .zone { width:1200px; margin: 0 auto;}
+    .widget { background: #3a3a3a; padding:8px 16px; box-sizing: border-box; border-radius: 6px;}
+    .widget:after { content:""; display: block; clear: both;}
+    .vdo-main { width: 79%; display: inline; float: left;}
+    .vdo-relate { width: 19%; display: inline; float: right;}
+    .vdo-thumb a { color: #FFF; text-decoration: none }
+    .vdo-thumb a:hover { color:coral}
+    .vdo-thumb img { width: 100%; height: auto; border:1px solid rgba(255,255,255,.6);}
+    .vdo-thumb strong { display: block; overflow: hidden; height: 40px; margin-bottom:8px; font-weight: normal;}
+    .vdo-thumb:last-child strong { margin-bottom:0px;}
+    .vdo-iframe { position: relative; overflow: hidden; padding-top: 56.25%;}
+    .vdo-iframe iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .zone { width:100%; margin: 0 auto }
+    .widget { padding: 0}
+    .vdo-main { width: 100%; display: block; float: none; padding: 6px; box-sizing: border-box}
+    .vdo-relate { width: 100%; display: block; float: none; overflow: hidden; box-sizing: border-box; padding: 3px;}
+    .vdo-thumb { width: 33%; display: inline; float: left; padding:0 3px 3px; box-sizing: border-box}
+    .vdo-thumb a { font-size: 15px; line-height:20px;}
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+    .zone { width:100%; margin: 0 auto }
+} 
+
+</style>
+
+
+</head><body><div id="widget" class="widget" style="">
+    <div id="loading" style="display: none;">
+        <img src="./spinner.gif" style="position: absolute;top: 300px;left: 45%;width: 100px;">
+    </div>
+    <div class="vdo-main" style="visibility: visible;">
+        <div class="vdo-iframe">                
+            <iframe id="player" frameborder="0" allowfullscreen="true" allow="autoplay" title="Dailymotion video player" width="100%" height="100%" src="./x7w8gcl.html"></iframe>                
+        </div>
+    </div>
+    <div class="vdo-relate" style="visibility: visible;">
+        <div class="vdo-thumb">
+            <a class="thumb_1" href="https://health.kapook.com/video/19509" onclick="sendEvent(&#39;Click&#39;, &#39;diet_thumb_1&#39;)" target="_blank"><img src="./notfound.jpg" onerror="this.src=&#39;https://my.kapook.com/images/notfound.jpg&#39;;"><strong>9 สมุนไพร ตัวช่วยดี ๆ ของคนกำลังลดหุ่น</strong></a>
+        </div>
+        <div class="vdo-thumb">
+            <a class="thumb_2" href="https://health.kapook.com/video/18727" onclick="sendEvent(&#39;Click&#39;, &#39;diet_thumb_2&#39;)" target="_blank"><img src="./notfound.jpg" onerror="this.src=&#39;https://my.kapook.com/images/notfound.jpg&#39;;"><strong>ประโยชน์ของน้ำมันมะพร้าว รู้แล้วว้าว ! นี่แหละสิ่งที่ทุกคนคู่ควร</strong></a>
+        </div>
+        <div class="vdo-thumb">
+            <a class="thumb_3" href="https://health.kapook.com/video/20314" onclick="sendEvent(&#39;Click&#39;, &#39;diet_thumb_3&#39;)" target="_blank"><img src="./notfound.jpg" onerror="this.src=&#39;https://my.kapook.com/images/notfound.jpg&#39;;"><strong>10 อาหารที่คนนอนดึกควรกิน ถ้าไม่อยากร่างพัง !</strong></a>
+        </div>
+    </div>
+</div>
+
+<script src="./jquery-3.2.1.min.js.загружено"></script>
+<script src="./all.js.загружено"></script>
+<script type="text/javascript" src="./cx.js(1).загружено"></script>
+<script type="text/javascript">
+
+var api = 'https://kapi.kapook.com/widget.php?template_id=4';
+var video_api = 'https://videoupload.kapook.com/api_kapook/video/';
+var video_href = 'https://health.kapook.com/video/';
+var videolist=[];
+var loop=0;
+
+function randomVideo(data,mark=0){
+    // check over nodata random
+    loop++;
+    if(loop>50){
+        return false;
+    }
+
+    // random bucket 2 to 4
+    let bucket_no = Math.floor(Math.random()*3)+2;
+
+    if(mark>0){bucket_no=mark;}
+
+    let bucket = data.find(find => find._id == bucket_no);
+    
+    // new random if bucket 0
+    if(bucket['total']==0){
+        return randomVideo(data,0);
+    }
+
+    // set range random position
+    if(bucket['total']>bucket['limit']){bucket['total']=bucket['limit'];}       
+
+    // console.log('func',videolist,bucket['video'][position]);
+
+    // random position
+    let position = Math.floor(Math.random()*bucket['total']);
+
+    // check flood
+    if(jQuery.inArray(bucket['video'][position],videolist) >= 0 ||  bucket['video'][position] === null || bucket['video'][position] === undefined ){
+        return randomVideo(data,0);
+    }else{        
+        return bucket['video'][position];     
+    }            
+    
+}
+
+function newRelate(data,portalName){
+    // console.log('data',data,portalName);
+    // content 3 box
+    while (videolist.length < 3 ) {
+        let vid = randomVideo(data);
+        // listvideo
+        videolist.push(vid);            
+    }    
+
+    // console.log('videolist',videolist);  
+    $.each(videolist, function(index, val) {
+        $.get(video_api+val, function(data) {
+            // console.log('video_url',data.data.portal,portalName[data.data.portal]);
+            // $('.thumb_'+(index+1)).attr('href', video_href+data.data.objId_content); 
+            video_Url='https://'+portalName[data.data.portal]+'.kapook.com/video/'+data.data.objId_content;
+            $('.thumb_'+(index+1)).attr('href', video_Url);            
+            $('.thumb_'+(index+1)).children('img').attr('src',data.data.thumbnail_url);
+            $('.thumb_'+(index+1)).children('strong').text(data.data.title);
+        });         
+    });    
+}
+
+function newPlayer(data){
+    // big video
+    let video = randomVideo(data,1);
+    if(!video){
+        video = randomVideo(data,0);
+    }
+    $.get(video_api+video, function(data) {
+        // console.log('video',data.data.objId_dailymotion);
+        var player = DM.player(document.getElementById("player"), {
+            video: data.data.objId_dailymotion,
+            width: "100%",
+            height: "100%",
+            params: {
+                autoplay: false,
+                mute: false
+            }
+        });        
+    });        
+}
+
+$.get(api, function(data) {
+
+    console.log('from api',data);
+    if(data.publish == 1 && data.total > 2){
+
+        $('#widget').show();
+
+        //player
+        newPlayer(data.result);
+
+        //player
+        newRelate(data.result,data.portalName);
+
+        // total random
+        console.log('loop',loop);
+
+        
+        $(".vdo-main").css('visibility','visible');
+        $(".vdo-relate").css('visibility','visible');    
+        $("#loading").hide();
+
+    }else{
+        console.log('no widget');
+    }
+
+    // console.log('_id:bucket_no:total:position:video',bucket['_id'],bucket_no,bucket['total'],position,bucket['video'][position]);
+
+});
+
+player.addEventListener('play', function(event) {
+  sendEvent('Click', 'diet_play');
+});
+
+cX.trackElement({ elementId: 'widget',
+    trigger: {
+        on: function(state) { return state.visibility.timeHalf >= 1; }, // Seconds
+        callback: function(state) {
+            cX.sendEvent('Visibility', { frame_view: 'diet' });
+        }
+    }
+});
+
+</script>
+</body></html>
